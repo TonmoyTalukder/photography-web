@@ -1,11 +1,16 @@
 import React from 'react';
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
-import './Header.css';
+import { HashLink } from 'react-router-hash-link';
 
+import './Header.css';
 import arrowLeft from '../../../images/arrowLeft.png';
 import arrowRight from '../../../images/arrowRight.png';
 
 const Header = () => {
+    const reload = () => {
+        window.location.reload(false);
+      }
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="fixed-top bg-transparent custom-margin" variant="light">
@@ -17,12 +22,12 @@ const Header = () => {
                             
                         </Nav> 
                         <Nav>
-                            <Nav.Link href="/home#home" className="text-dark custom-border">Home</Nav.Link>
-                            <Nav.Link href="/home#about" className="text-dark custom-border">About</Nav.Link>
-                            <Nav.Link href="/home#service-and-package" className="text-dark custom-border">Service &#38; Package</Nav.Link>
-                            <Nav.Link href="/home#gallery" className="text-dark custom-border">Gallery</Nav.Link>
-                            <Nav.Link href="/home#faq" className="text-dark custom-border">FAQ</Nav.Link>
-                            <Nav.Link href="/home#contact" className="text-dark custom-border">Contact</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#home" className="text-dark custom-border">Home</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#about" className="text-dark custom-border">About</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#service-and-package" className="text-dark custom-border">Service &#38; Package</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#gallery" className="text-dark custom-border">Gallery</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#faq" className="text-dark custom-border">FAQ</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#contact" className="text-dark custom-border">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
@@ -35,8 +40,8 @@ const Header = () => {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link href="/home#home" className="text-dark text-center custom-border">Home</Nav.Link>
-                            <Nav.Link href="/home#about" className="text-dark text-center custom-border">About</Nav.Link>
+                            <Nav.Link href="/" onClick={reload} className="text-dark text-center custom-border">Home</Nav.Link>
+                            <Nav.Link href="/home#about" onClick={reload} className="text-dark text-center custom-border">About</Nav.Link>
                             <Nav.Link href="/home#service-and-package" className="text-dark text-center custom-border">Service &#38; Package</Nav.Link>
                             <Nav.Link href="/home#gallery" className="text-dark text-center custom-border">Gallery</Nav.Link>
                             <Nav.Link href="/home#faq" className="text-dark text-center custom-border">FAQ</Nav.Link>
