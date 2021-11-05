@@ -9,19 +9,19 @@ const About = () => {
         <Container className="py-5 mt-5"  id="about">
             <Row>
                 <Col>
-                    <div class="row gy-1">
-                        <div class="col">
-                            <div class="p-0 imgOne">
+                    <div className="row gy-1 mx-5 px-5">
+                        <div className="col">
+                            <div className="p-0 imgOne">
                                 <img src={aboutBanner} alt="" />
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="p-0">
+                        <div className="col">
+                            <div className="p-0 imgTwo">
                                 <img src={aboutBanner} alt="" />
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="p-0 imgThree">
+                        <div className="col">
+                            <div className="p-0 imgThree">
                                 <img src={aboutBanner} alt="" />
                             </div>
                         </div>

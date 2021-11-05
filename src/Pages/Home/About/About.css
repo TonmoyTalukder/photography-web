@@ -6,3 +6,10 @@
   margin-top: 50px;
   overflow: hidden;
 }
+
+@media only screen and (max-width: 991px) {
+  .imgTwo {
+    margin-top: 50px;
+    overflow: hidden;
+  }
+}
