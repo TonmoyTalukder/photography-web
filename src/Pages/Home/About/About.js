@@ -7,7 +7,7 @@ import aboutBanner from '../../../images/aboutBanner.png';
 const About = () => {
     return (
         <Container className="py-5 mt-5"  id="about">
-            <Row>
+            <Row className="gy-5">
                 <Col>
                     <div className="row gy-1 mx-5 px-5">
                         <div className="col">
