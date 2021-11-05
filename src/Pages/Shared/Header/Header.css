@@ -1,0 +1,38 @@
+/* .custom-background {
+  background-color: transparent !important;
+} */
+.jumbotron {
+  position: relative;
+  background: none;
+  height: 700px;
+  overflow: hidden;
+}
+.jumbotron:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/src/images/bannerBg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 700px;
+  opacity: 0.2;
+  z-index: -1;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 991px) {
+  .custom-background {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+    width: 50%;
+  }
+  .custom-border {
+    /* border-color: black !important; */
+    border-bottom: 1px solid black !important;
+  }
+}
